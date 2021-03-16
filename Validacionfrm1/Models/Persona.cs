@@ -17,7 +17,7 @@ namespace Validacionfrm1.Models
         [Range(1, 18, ErrorMessage ="la edad debe estar entre 1 y 18")]
 
         public int Edad { get; set; }
-
+        [Required(ErrorMessage ="Es obligatorio el Email")]
         [EmailAddress(ErrorMessage ="Debe ingresar un mail valido")]
 
         public String Email { get; set; }
