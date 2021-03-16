@@ -22,7 +22,8 @@ namespace Validacionfrm1.Models
 
         public String Email { get; set; }
 
-        [RegularExpression("[MmFf]", ErrorMessage ="Solo puede ingresar una M o F")]
+        [Required(ErrorMessage ="Es obligatorio el genero")]
+        [RegularExpression("[MmFfOo]", ErrorMessage ="Solo puede ingresar una M o F")]
 
         public String Genero { get; set; }
     }
