@@ -11,13 +11,13 @@ namespace Validacionfrm1.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index2()
         {
             Persona per = new Persona();
             return View(per);
         }
         [HttpPost]
-        public ActionResult Index(Persona per)
+        public ActionResult Index2(Persona per)
         {
             if (ModelState.IsValid)
                 return View("Correcto");

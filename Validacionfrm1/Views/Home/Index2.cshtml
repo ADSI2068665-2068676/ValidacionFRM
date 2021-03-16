@@ -1,0 +1,40 @@
+﻿@model Validacionfrm1.Models.Persona
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index2</title>
+</head>
+<body>
+    <div> 
+        @Html.ValidationSummary()
+        @using (Html.BeginForm())
+        {
+            <p>
+                Ingrese Nombre:
+                @Html.EditorFor(model => model.Nombre)
+            </p>
+            <p>
+                Ingrese Edad (Entre 1 y 18):
+                @Html.EditorFor(model => model.Edad)
+            </p>
+            <p>
+                Ingrese Email:
+                @Html.EditorFor(model => model.Email)
+            </p>
+            <p>
+                Ingrese Genero:
+                @Html.EditorFor(model => model.Genero)
+            </p>
+            <p>
+                <input type="submit"value="Guardar" />
+            </p>
+        }
+    </div>
+</body>
+</html>
